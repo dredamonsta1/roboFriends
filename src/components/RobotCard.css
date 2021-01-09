@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* flex-wrap: wrap; */
+}
+
+.main-card {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content:flex-start; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+
+    /* background-color: cornflowerblue; */
+    
+}
+
+.main-card :hover{
+   
+
+    background-color: cornflowerblue;
+    
+}
