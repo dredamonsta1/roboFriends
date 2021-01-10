@@ -6,7 +6,7 @@ import '../components/RobotCard.css';
 
 const RobotCard = ({ name, email, id }) => {
     return (
-        <div>
+        <div className='container'>
             <div className='main-card'>
             <img alt='robots' src={`https://robohash.org/${id}%200X200`}/>
                 <div className='card-name'>

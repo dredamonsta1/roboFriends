@@ -4,6 +4,12 @@
     border: 1px solid black;
     box-sizing: border-box;
   }
+
+  .container {
+      width: 303px;
+      border: 1px solid red;
+  }
+
 .main-card {
     display:grid;
     align-items: center;
@@ -13,14 +19,16 @@
     padding: 0px;
     margin: 0px;
     width: 303px;
-    height: 400px;
+    height: 360px;
 
     /* background-color: cornflowerblue; */
     
 }
 
 .card-name {
-    width: 50px;
+    width: 303px;
+    border: 1px solid yellow;
+    
 }
 
 div :hover{
