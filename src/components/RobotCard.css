@@ -6,35 +6,28 @@
   }
 
   .container {
+      display: inline-grid;
+      grid-template-columns: auto;
       width: 303px;
-      border: 1px solid red;
+      align-items: grid-start;
   }
 
 .main-card {
-    display:grid;
+    grid-column-start: auto;
     align-items: center;
-    /* justify-content:flex-start; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     padding: 0px;
     margin: 0px;
     width: 303px;
     height: 360px;
-
-    /* background-color: cornflowerblue; */
     
 }
 
 .card-name {
     width: 303px;
-    border: 1px solid yellow;
     
 }
 
 div :hover{
-    /* width: 50px; */
-   
-
     background-color: cornflowerblue;
     
 }
