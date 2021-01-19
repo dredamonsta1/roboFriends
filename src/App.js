@@ -7,16 +7,16 @@ import { robots } from '../src/components/RobotsDb';
 
 
 const App = () => {
-    // const [robots, RobotState] = useState('');
 
-    // render() {
+    const [robot, setRobot] = useState('');
 
-    // }
+    
+    
     
     return (
         <Fragment>
         <h1>RoboFriends</h1>
-        <SearchBox/>
+        <SearchBox onClick={() => setRobot(robot)}/>
         <CardList robots={robots}/>
         </Fragment>
     )
