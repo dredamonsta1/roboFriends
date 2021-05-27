@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Component} from 'react';
 import CardList from './components/CardList';
 import SearchBox from './components/SearchBox';
 import { robots } from '../src/components/RobotsDb';
@@ -6,26 +6,47 @@ import { robots } from '../src/components/RobotsDb';
 
 
 
-const App = () => {
-
-    const [robot, setRobot] = useState(robots);
-
-
-    const onSearchChange = (e) => {
-        console.log(e.target.value);
-    }
-
-    
-    
-    
-    return (
-        <Fragment>
-            <h1>RoboFriends</h1>
-            <SearchBox searchChange={onSearchChange} />
-            <CardList robots={robots}/>
-        </Fragment>
-    )
+const state = {
+    robots: robots,
+    searchfield: ''
 }
+
+class App extends Component {
+    render() {
+
+        return (
+            <div>
+            <h1>RoboFriends</h1>
+            <SearchBox />
+            <CardList robots={robots}/>
+            </div>
+            )
+        }
+
+}
+
+
+
+// const App = () => {
+
+    // const [robot, setRobot] = useState(robots);
+
+
+    // const onSearchChange = (e) => {
+    //     console.log(e.target.value);
+    // }
+
+    
+    
+    
+//     return (
+//         <>
+//             <h1>RoboFriends</h1>
+//             <SearchBox searchChange={onSearchChange} />
+//             <CardList robots={robots}/>
+//         </>
+//     )
+// }
 
 export default App;
 
