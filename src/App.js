@@ -6,21 +6,37 @@ import { robots } from '../src/components/RobotsDb';
 
 
 
-const state = {
-    robots: robots,
-    searchfield: ''
-}
+// const state = {
+//     robots: robots,
+//     searchfield: ''
+// }
 
 class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            robots: robots,
+            searchfield: ''
+        }
+    }
+
+    onSearchChange(e) {
+        console.log(e.target.value);
+        const filterRobots = this.state.robots.filter(robot =>{
+            return robots.name.toLowerCase().includes(this.onSearchChange.toLowerCase);
+        })
+    }
+
+
     render() {
 
         return (
             <div>
-            <h1>RoboFriends</h1>
-            <SearchBox />
-            <CardList robots={robots}/>
+                <h1>RoboFriends</h1>
+                <SearchBox searchChange={this.onSearchChange}/>
+                <CardList robots={this.state.robots}/>
             </div>
-            )
+            );
         }
 
 }
