@@ -16,7 +16,7 @@ const CardList = ({ robots }) => {
                         email={robots[i].email}
                         />
                     );
-                })}  
+            }   )}  
         </>
     );
 }
