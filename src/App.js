@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './components/CardList';
 import SearchBox from './components/SearchBox';
 // import { robots } from '../src/components/RobotsDb';
+import Scroll from './components/Scroll';
 
 class App extends Component {
     constructor() {
@@ -15,10 +16,7 @@ class App extends Component {
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response=> response.json())
-            .then(users => {
-            this.setState({ robots: users});
-
-        })
+            .then(users => this.setState({ robots: users}));
         console.log("check")
     }
 
@@ -30,15 +28,22 @@ class App extends Component {
         const filterRobots = this.state.robots.filter(robots =>{
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase);
         })
-        console.log(filterRobots);
+        if(this.state.robots.length === 0) {
+            return <h1>Loading...</h1>
+        } else {
 
-        return (
-            <div>
-                <h1>RoboFriends</h1>
+            console.log(filterRobots);
+            
+            return (
+                <>
+                <h1 className="robot-header">Robo Friends</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
-                <CardList robots={filterRobots}/>
-            </div>
-        );
+                <Scroll>
+                    <CardList robots={filterRobots}/>
+                </Scroll>
+                </>
+                );
+        }
     }
 
 }
