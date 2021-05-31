@@ -1,9 +1,6 @@
 import React from 'react';
 import '../components/RobotCard.css';
 
-
-
-
 const RobotCard = ({ name, email, id }) => {
     return (
         <div className='container'>
