@@ -2,8 +2,6 @@ import React from 'react';
 import RobotCard from './RobotCard';
 
 
-
-
 const CardList = ({ robots }) => {
     return(
         <>

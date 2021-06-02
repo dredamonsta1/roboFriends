@@ -1,10 +1,6 @@
 import React from 'react';
 
 
-
-
-
-
 const SearchBox =({ searchfield, searchChange }) =>{
     return (
         <div className='search'>
