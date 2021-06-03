@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Click here to view this site [Robo Friends](https://dredamonsta1.github.io/roboFriends/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
